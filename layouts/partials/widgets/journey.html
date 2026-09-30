@@ -1,0 +1,35 @@
+{{/* Education & Experience: logo tile beside the header, details below (content/home/journey.md). */}}
+{{ $page := .page }}
+{{ $columns := $page.Params.design.columns | default "2" }}
+
+<div class="col-12 {{ if eq $columns "2" }}col-lg-8{{ end }}">
+  {{ with $page.Content }}{{ . }}{{ end }}
+
+  {{ range $page.Params.items }}
+  {{ $org := .org | plainify }}
+  <div class="journey-item{{ if .small }} journey-small{{ end }}">
+    <div class="journey-logo">
+      {{ with .logo }}<img src="{{ printf "img/orgs/%s" . | relURL }}" alt="{{ $org }}" width="56" height="56" loading="lazy">{{ end }}
+    </div>
+    <div class="journey-head">
+      <div class="journey-title">{{ .title | markdownify }}</div>
+      <div class="journey-org">{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .org | markdownify }}{{ with .url }}</a>{{ end }}</div>
+      <div class="journey-meta">{{ .dates }}{{ with .location }}<span class="middot-divider"></span>{{ . }}{{ end }}</div>
+    </div>
+    {{ if or .bullets .links }}
+    <div class="journey-details">
+      {{ with .bullets }}
+      <ul class="journey-bullets">
+        {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
+      </ul>
+      {{ end }}
+      {{ with .links }}
+      <div class="btn-links journey-links">
+        {{ range . }}<a class="btn btn-outline-primary btn-page-header btn-sm" href="{{ .url | safeURL }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><i class="fas fa-{{ .icon | default "link" }} mr-1" aria-hidden="true"></i>{{ .name }}</a>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>

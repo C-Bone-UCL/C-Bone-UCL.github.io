@@ -1,0 +1,13 @@
+---
+title: "Six Open Questions in Machine-Learned Interatomic Potential Foundation Models"
+date: 2026-06-05
+publishDate: 2026-06-05
+type: publication
+authors: ["Isabel Creed", "Tim Rein", "Ingvars Vitenburgs", "Wojciech G. Stark", "Viktor Ellingsson", "Ahmed Y. Ismail", "Guangyu Liu", "Yuchen Lou", "Bradley A. A. Martin", "**Cyprien Bone**", "Matthew A. H. Walker", "Mueen Taj", "Shirui Wang", "Kelvin Wong", "Ruiqi Wu", "Prakriti Kayastha", "Bingqing Cheng", "Aditi Krishnapriyan", "Michele Ceriotti", "Marcel F. Langer", "Jarvist Moore Frost", "Alex M. Ganose", "Venkat Kapil", "Keith T. Butler"]
+publication_types: ["2"]
+abstract: "Machine-learned interatomic potentials (MLIPs) have had a profound impact on molecular modelling in recent years, promising to resolve the long-standing tension between the scale and accuracy of simulations. There has been a proliferation of new models and designs, and recently the paradigm of \"foundational\" MLIPs has become prevalent. Broadly speaking, foundation models are trained on large diverse datasets and promise to work well for new systems with minimal updates required. However, in such a new and fast moving field, there are many unanswered questions. In this article, we set out to articulate and explore what we see as the most important among these questions. We start by developing a working definition for foundational MLIPs and use this definition to frame the subsequent open questions. Despite the rapid progress in the field of MLIP models, we believe that these are fundamental questions which will continue to define cutting edge research in MLIPs in the years to come."
+featured: false
+publication: "Nature Machine Intelligence (accepted)"
+links:
+  - {icon_pack: ai, icon: arxiv, name: arXiv, url: 'https://arxiv.org/abs/2606.07327'}
+---

@@ -1,0 +1,294 @@
+/* Site styles on top of Wowchemy. Base size comes from params.yaml (font_size: M = 18px). */
+
+$pixel: 'Press Start 2P', monospace;
+$gap: 20px;
+
+/* Layout rhythm */
+
+.home-section {
+  padding: 72px 0;
+  @media (max-width: 767px) { padding: 48px 0; }
+}
+
+.article-container {
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Section titles: pixel font, aligned with the first line of the content column */
+
+.section-heading h1 {
+  font-family: $pixel;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 4px 0 12px;
+}
+
+/* Navbar: links only (name lives under the portrait), pixel font kept small */
+
+.navbar-brand { display: none; }
+.navbar .nav-link {
+  font-family: $pixel;
+  font-size: 0.68rem;
+  padding: 10px 0 0;
+  margin: 10px 0;
+}
+
+/* About: portrait column */
+
+section#about { padding-top: 96px; }
+.wg-about {
+  @media screen and (min-width: 768px) {
+    height: auto;          /* theme pins About to 100vh and centres it */
+    display: block;
+    margin-bottom: 0;
+  }
+}
+.wg-about .container { margin-bottom: 0 !important; }
+
+#profile { padding: 0 10px 24px; }
+.wg-about .row { margin-top: 0; }
+.wg-about .avatar { width: 190px; height: 190px; }
+.portrait-title h2 {
+  font-family: $pixel;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin: 20px 0 10px;
+}
+.portrait-title h3 {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin: 0 0 4px;
+}
+#profile .request-row { margin-top: 12px; }
+.profile-languages { font-size: 0.85rem; opacity: 0.75; margin: 6px 0 0; }
+
+#profile .network-icon {
+  margin-top: 16px;
+  li { margin: 0 5px; }
+  .big-icon { font-size: 1.45rem; }
+  .custom-icon.big-icon svg { vertical-align: 0.1em; }  /* SVG sits lower than the icon-font glyphs */
+}
+
+.wg-about .article-style p { line-height: 1.7; }
+
+/* Brand SVGs Font Awesome 5 lacks (assets/media/icons/brands/) */
+
+.custom-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
+}
+
+/* Featured: full width, title left like the other sections. Cards sit on a CSS grid rather than
+   Isotope's absolute positioning, so every card in a row has the same height and grows when its
+   buttons need room (Isotope still runs; its inline positions are overridden). */
+
+.wg-portfolio .section-heading {
+  text-align: left !important;   /* theme centres full-width titles (.text-center) */
+  @media (max-width: 991px) { text-align: center !important; }  /* the other sections centre below lg too */
+}
+
+.wg-portfolio .projects-container {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap;
+  height: auto !important;
+  @media (max-width: 575px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    .isotope-item:first-child { grid-column: 1 / -1; }
+  }
+}
+.wg-portfolio .isotope-item {
+  position: static !important;
+  transform: none !important;
+  width: auto !important;
+  margin: 0 !important;
+}
+
+.wg-portfolio .card-simple {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  margin: 0;
+
+  > a:first-child { display: block; }
+  .img-hover-zoom {
+    aspect-ratio: 3 / 2;     /* same logo area on every card, so the titles line up */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;        /* white tile so the logos sit with some air in dark mode too */
+    border-radius: 4px;
+    padding: 4%;
+  }
+  .article-banner {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  .article-title {
+    font-family: $pixel;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 12px 0 8px !important;
+  }
+  .summary-link { display: none; }  /* the About text and links carry the description */
+  .btn-links {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    .btn { flex: 1 1 auto; margin: 0; }   /* buttons stretch to fill each row, no ragged gaps */
+  }
+  @media (max-width: 575px) {
+    padding: 10px;
+    .article-title { font-size: 0.7rem; margin: 10px 0 6px !important; }
+  }
+}
+
+/* Education & Experience (layouts/partials/widgets/journey.html) */
+
+.journey-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  column-gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.18);
+  &:first-child { padding-top: 0; }
+  &:last-child { border-bottom: 0; }
+}
+.journey-logo {
+  width: 56px;
+  height: 56px;
+  grid-row: 1 / span 2;   /* own column to the left of the header and bullets */
+  margin-top: 2px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(127, 127, 127, 0.22);
+  img { display: block; width: 100%; height: 100%; object-fit: cover; }
+}
+.journey-head { min-width: 0; }
+.journey-details { grid-column: 2; min-width: 0; }
+@media (max-width: 575px) {
+  .journey-item { grid-template-columns: 44px 1fr; column-gap: 14px; }
+  .journey-logo { width: 44px; height: 44px; border-radius: 10px; }
+  .journey-bullets { padding-left: 1rem; }
+}
+.journey-title { font-size: 1rem; font-weight: 600; line-height: 1.4; p { display: inline; margin: 0; } }
+.journey-org { font-size: 0.92rem; line-height: 1.5; p { display: inline; margin: 0; } }
+.journey-meta { font-size: 0.8rem; opacity: 0.65; line-height: 1.5; }
+.journey-bullets {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 10px 0 0;
+  padding-left: 1.1rem;
+  li { margin-bottom: 3px; }
+  p { display: inline; margin: 0; }
+}
+.journey-links { margin-top: 10px; }
+.journey-small .journey-title { font-size: 0.95rem; }
+
+/* Tutorials & Workshops (layouts/partials/widgets/tutorials.html) */
+
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap;
+  @media (max-width: 767px) { grid-template-columns: 1fr; gap: 14px; }
+}
+.tutorial-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  color: inherit !important;    /* the dark theme's link colour would tint the whole card */
+  text-decoration: none !important;
+  transition: box-shadow 0.15s, transform 0.15s;
+  &:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); transform: translateY(-2px); }
+  .dark & { background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.1); box-shadow: none; }
+  @media (max-width: 575px) { padding: 14px 16px; }
+}
+.tutorial-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.tutorial-arrow { font-size: 0.8rem; color: $sta-primary; flex-shrink: 0; transition: transform 0.15s; }
+.tutorial-card:hover .tutorial-arrow { transform: translateX(3px); }
+.tutorial-where { font-size: 0.78rem; opacity: 0.65; margin: 2px 0 8px; }
+.tutorial-text { font-size: 0.88rem; line-height: 1.55; p { margin: 0; } }
+
+/* Buttons: one compact outline style everywhere */
+
+.btn-links .btn,
+.btn-page-header.btn-sm {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.5rem;
+  margin: 0 4px 6px 0;
+}
+/* Dark mode: the theme recolours outline-button text to the link blue but keeps the red border */
+.dark .btn-outline-primary { border-color: currentColor; }
+
+/* News (compact list) */
+
+.media.stream-item {
+  margin-bottom: 24px !important;
+  .media-body { display: flex; flex-direction: column; }
+  .stream-meta { order: -1; margin: 0 0 2px; }
+  .article-metadata { font-size: 0.78rem; margin: 0; opacity: 0.75; }
+  .article-title { font-size: 1.05rem; font-weight: 600; line-height: 1.4; }
+  .article-style { font-size: 0.92rem; margin-top: 4px; }
+  .btn-links { margin-top: 8px; }
+  > .ml-3:empty { display: none; }
+}
+.see-all { font-size: 0.85rem; }
+
+/* Publications (citation list) */
+
+.pub-list-item {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+.view-citation .pub-icon { display: none; }
+
+/* Paper pages: metadata rows flush with the abstract; the "Type" row (first) links nowhere useful */
+.pub .article-container > .row {
+  > .col-md-1 { display: none; }
+  > .col-md-10 { flex: 0 0 100%; max-width: 100%; }
+  &:first-of-type { display: none; }
+}
+
+/* Contact: icon on the same line as the address */
+
+.wg-contact .fa-ul {
+  margin-left: 0;
+  li { display: flex; align-items: center; gap: 12px; }
+  .fa-li { position: static; width: auto; font-size: 1.3rem; }
+}
+
+/* Paper pages: logo in the same white tile, capped (theme sets the image's own size inline) */
+
+.featured-image-wrapper {
+  max-width: 300px !important;
+  background: #fff;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+/* Keep the 8-bit logos crisp when scaled */
+img[src*="featured"] { image-rendering: pixelated; }
