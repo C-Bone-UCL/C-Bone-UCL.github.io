@@ -14,5 +14,5 @@ image:
 links:
   - {icon_pack: ai, icon: arxiv, name: arXiv, url: 'https://arxiv.org/abs/2511.21299'}
   - {icon_pack: fab, icon: github, name: Code, url: 'https://github.com/C-Bone-UCL/CrystaLLM-pi'}
-  - {icon_pack: fas, icon: flask, name: Paper code, url: 'https://github.com/C-Bone-UCL/CrystaLLM-pi-paper'}
+  - {icon_pack: fas, icon: flask, name: Paper reproduction code, url: 'https://github.com/C-Bone-UCL/CrystaLLM-pi-paper'}
 ---
