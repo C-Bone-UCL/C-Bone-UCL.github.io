@@ -118,20 +118,21 @@ section#about { padding-top: 96px; }
 
   > a:first-child { display: block; }
   .img-hover-zoom {
+    position: relative;
     aspect-ratio: 3 / 2;     /* same logo area on every card, so the titles line up */
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #fff;        /* white tile so the logos sit with some air in dark mode too */
     border-radius: 4px;
-    padding: 4%;
   }
+  /* Pinned inside the tile rather than sized by max-height: 100%, which phone Safari doesn't
+     resolve against an aspect-ratio box (the logo overflowed and got cropped top and bottom) */
   .article-banner {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    width: 92%;
+    height: 92%;
     object-fit: contain;
+    transform: none !important;   /* no hover zoom: it pushes the logo past the tile, and sticks after a tap on phones */
   }
   .article-title {
     font-family: $pixel;
