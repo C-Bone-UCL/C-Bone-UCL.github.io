@@ -51,6 +51,9 @@ items:
           - name: Thesis available on request
             url: "mailto:cyprien.bone.24@ucl.ac.uk?subject=MSci%20thesis%20request"
             icon: file-alt
+      - name: Teaching
+        bullets:
+          - "Tutor in physics, maths, chemistry and literature for students in Years 8 to 10 (French 5ème to 3ème)."
       - name: Awards
         bullets:
           - "1st Class Honours, Dean's List (Final Year)."
