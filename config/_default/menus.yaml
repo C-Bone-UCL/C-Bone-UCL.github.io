@@ -10,15 +10,15 @@ main:
   - name: Experience
     url: '#journey'
     weight: 20
-  - name: Featured
+  - name: Software
     url: '#gallery'
     weight: 30
-  - name: Tutorials
-    url: '#tutorials'
-    weight: 40
-  - name: News
-    url: '#news'
-    weight: 50
   - name: Publications
     url: '#publications'
+    weight: 40
+  - name: Teaching
+    url: '#tutorials'
+    weight: 50
+  - name: News
+    url: '#news'
     weight: 60

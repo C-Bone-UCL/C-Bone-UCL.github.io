@@ -3,8 +3,8 @@ active: true
 widget: portfolio
 headless: true
 weight: 25
-title: Featured
-subtitle: ''
+title: Research Software
+subtitle: 'Open-source code from my PhD.'
 content:
   page_type: gallery
   filter_default: 0

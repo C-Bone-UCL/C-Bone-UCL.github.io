@@ -15,19 +15,23 @@
       <div class="journey-title">{{ .title | markdownify }}</div>
       <div class="journey-org">{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .org | markdownify }}{{ with .url }}</a>{{ end }}</div>
       <div class="journey-meta">{{ .dates }}{{ with .location }}<span class="middot-divider"></span>{{ . }}{{ end }}</div>
+      {{ with .supervisor }}<div class="journey-meta">Supervisor: {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .name }}{{ with .url }}</a>{{ end }}</div>{{ end }}
     </div>
-    {{ if or .bullets .links }}
+    {{ if or .bullets .sections .links }}
     <div class="journey-details">
       {{ with .bullets }}
       <ul class="journey-bullets">
         {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
       </ul>
       {{ end }}
-      {{ with .links }}
-      <div class="btn-links journey-links">
-        {{ range . }}<a class="btn btn-outline-primary btn-page-header btn-sm" href="{{ .url | safeURL }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><i class="fas fa-{{ .icon | default "link" }} mr-1" aria-hidden="true"></i>{{ .name }}</a>{{ end }}
-      </div>
+      {{ range .sections }}
+      <div class="journey-section">{{ .name }}</div>
+      <ul class="journey-bullets">
+        {{ range .bullets }}<li>{{ . | markdownify }}</li>{{ end }}
+      </ul>
+      {{ partial "journey_links" .links }}
       {{ end }}
+      {{ partial "journey_links" .links }}
     </div>
     {{ end }}
   </div>

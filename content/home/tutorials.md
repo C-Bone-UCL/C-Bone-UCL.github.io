@@ -2,7 +2,8 @@
 widget: tutorials
 headless: true
 weight: 27
-title: Tutorials & Workshops
+title: Teaching Resources
+subtitle: 'Notebooks, workshops and tutorials.'
 design:
   columns: '2'
 

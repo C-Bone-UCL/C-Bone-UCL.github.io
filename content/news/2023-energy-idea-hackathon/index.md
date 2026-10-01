@@ -9,4 +9,4 @@ type: "news"
 layout: "single"
 ---
 
-Prescelli Annan, Niklas Jutting, Tom Burns and I won first place at the Energy Idea Challenge 2023, sponsored by Octopus Energy, KPMG, Guidehouse and Imperial. Over a weekend, teams of students from Oxford, Cambridge, Imperial, UCL and other universities put together proposals to help the UK hit its net zero targets. Ours was a wastewater heat pump system, with machine learning for predictive maintenance.
+Prescelli Annan, Niklas Jutting, Tom Burns and I won first place at the Energy Idea Challenge 2023, run by the Imperial College Energy Society and sponsored by Octopus Energy, KPMG and Guidehouse. Over a weekend, teams of students from Oxford, Cambridge, Imperial, UCL and other universities put together proposals to help the UK hit its net zero targets. Ours was a wastewater heat pump system, with machine learning for predictive maintenance.

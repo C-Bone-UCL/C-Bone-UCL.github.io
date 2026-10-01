@@ -1,0 +1,6 @@
+{{/* Buttons under a journey entry or one of its sections; takes the `links` list (name, url, icon). */}}
+{{ with . }}
+<div class="btn-links journey-links">
+  {{ range . }}<a class="btn btn-outline-primary btn-page-header btn-sm" href="{{ .url | safeURL }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><i class="fas fa-{{ .icon | default "link" }} mr-1" aria-hidden="true"></i>{{ .name }}</a>{{ end }}
+</div>
+{{ end }}

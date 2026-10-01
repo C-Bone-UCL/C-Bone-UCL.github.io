@@ -18,6 +18,9 @@ $gap: 20px;
 
 /* Section titles: pixel font, aligned with the first line of the content column */
 
+.section-heading p {
+  @media (max-width: 991px) { text-align: center; }   /* titles centre below lg, so their subtitles do too */
+}
 .section-heading h1 {
   font-family: $pixel;
   font-size: 1.05rem;
@@ -192,6 +195,13 @@ section#about { padding-top: 96px; }
   padding-left: 1.1rem;
   li { margin-bottom: 3px; }
   p { display: inline; margin: 0; }
+}
+.journey-section {
+  font-family: $pixel;
+  font-size: 0.56rem;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+  margin: 12px 0 -4px;
 }
 .journey-links { margin-top: 10px; }
 .journey-small .journey-title { font-size: 0.95rem; }
