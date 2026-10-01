@@ -5,6 +5,11 @@ title: "Poster at the GeMMS 2026 Spring School"
 summary: "CrystaLLM-π poster at the GeMMS spring school in London."
 tags:
 - Talks
+links:
+  - icon_pack: fas
+    icon: image
+    name: Poster
+    url: 'posters/crystallm-pi-poster.pdf'
 type: "news"
 layout: "single"
 ---

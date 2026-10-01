@@ -10,10 +10,6 @@ links:
     icon: image
     name: Poster
     url: 'posters/crystallm-prop-poster.pdf'
-  - icon_pack: fas
-    icon: globe
-    name: Event
-    url: 'https://aichemy.ac.uk/event/aichemy-annual-conference/'
 type: "news"
 layout: "single"
 ---

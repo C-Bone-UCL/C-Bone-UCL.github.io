@@ -10,14 +10,6 @@ links:
     icon: arxiv
     name: arXiv
     url: 'https://arxiv.org/abs/2511.21299'
-  - icon_pack: fab
-    icon: github
-    name: Code
-    url: 'https://github.com/C-Bone-UCL/CrystaLLM-pi'
-  - icon_pack: fas
-    icon: cubes
-    name: Models & data
-    url: 'https://huggingface.co/c-bone'
 type: "news"
 layout: "single"
 ---
