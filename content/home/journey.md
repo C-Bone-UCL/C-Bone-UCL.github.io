@@ -1,7 +1,7 @@
 ---
 widget: journey
 headless: true
-weight: 22
+weight: 28
 title: Education & Experience
 design:
   columns: '2'

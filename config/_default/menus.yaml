@@ -9,7 +9,7 @@ main:
     weight: 10
   - name: Experience
     url: '#journey'
-    weight: 20
+    weight: 55
   - name: Software
     url: '#gallery'
     weight: 30
