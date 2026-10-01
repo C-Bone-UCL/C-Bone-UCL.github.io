@@ -18,7 +18,7 @@ items:
     logo: ucl.png
     bullets:
       - "Building [CrystaLLM-π](https://github.com/C-Bone-UCL/CrystaLLM-pi), a conditional transformer for property-guided crystal structure generation, supervised by Keith T. Butler."
-      - "Teaching assistant on Mathematical Foundations of ML and on Deep Learning Methods, as well as a few computational chemistry courses"
+      - "Teaching assistant on Mathematical Foundations of ML, on Machine Learning Methods, as well as a few computational chemistry courses"
       - "Supervised two students from under-represented backgrounds for a summer research project"
       - "Mentored Jamie Swaine's bachelor's project, now a paper in J. Mater. Chem. C."
 
